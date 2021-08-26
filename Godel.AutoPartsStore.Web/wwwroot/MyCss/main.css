@@ -1,0 +1,55 @@
+﻿@import url('file:///D:\$$$My Git docs$$$\AutoPartsStore\AutoPartsStore\wwwroot\MyCss\main.css');
+.section {
+    display: flex;
+    overflow-x: auto;
+}
+
+.container {
+    color: black;
+}
+
+.navbar-brand {
+    font-size: 28px;
+    color: black;
+    font: 30px-apple-system;
+    margin: 0px 16px 0px 0px;
+    padding: 5px 0px;
+}
+
+.store-color {
+    color: #ffc107;
+}
+
+
+.top-nav-right {
+    float: right;
+    text-align: center;
+    padding: 20px 30px 20px 30px;
+    font-size: 18px;
+}
+
+.link-right {
+    color: #ffc107;
+}
+
+.border-top {
+    width: 100%;
+    padding: 16px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-footer {
+    color: #ffc107;
+    padding: 14px;
+}
+
+.text-center {
+  font-size:large;
+}
+
+/*.margin-bottom {
+    margin-bottom:5px!important;
+}*/

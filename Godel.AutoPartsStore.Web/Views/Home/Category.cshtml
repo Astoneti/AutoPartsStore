@@ -1,0 +1,13 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <p class="h2">Category name :</p>
+            @{ foreach (var item in Model)
+               {
+               <p class="h5">
+                    @item.Name
+               </p>
+               }}
+        </div>
+    </div>
+</div>

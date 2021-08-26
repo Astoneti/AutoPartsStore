@@ -1,0 +1,38 @@
+﻿@model Godel.AutoPartsStore.Common.Authorization.LoginModel
+
+    <div class="container">
+        <div class="row row-cals-3 ">
+            <div class="col-md-10">
+                <p class="h1">
+                    Log in to the site :
+                </p>
+            </div>
+            <div class="col-md-10"><a asp-action="Register" asp-controller="Account">Registration :</a></div>
+            <form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
+                <div class="validation" asp-validation-summary="ModelOnly"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <label asp-for="Email">Enter your Email :</label><br />
+                                <input type="text" asp-for="Email" />
+                                <span asp-validation-for="Email" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label asp-for="Password">Enter your password :</label><br />
+                            <input asp-for="Password" />
+                            <span asp-validation-for="Password" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="submit" value="Login" class="btn btn-success mt-3" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

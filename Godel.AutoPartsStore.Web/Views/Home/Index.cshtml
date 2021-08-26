@@ -1,0 +1,28 @@
+﻿@using Godel.AutoPartsStore.DAL.Models;
+@model List<Category>
+<div class="container">
+    <div class="row row-cals-3">
+        <div class="col">
+            @{
+                ViewData["Title"] = "Home Page";
+            }
+            <div class="text-center">
+                <p class="display-4">Welcome to</p>
+                <p class="display-3">Auto Parts Store</p>
+                <p>Only here you will find auto parts from the world's best manufacturers!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        @{ foreach (var item in Model)
+           {
+                <div class="col-sm">
+                    <a> @Html.ActionLink(item.Name, "FilteredParts", new { Id = item.Id })</a>
+                </div>
+           }
+         }
+    </div>
+</div>
+

@@ -1,0 +1,61 @@
+﻿@using Godel.AutoPartsStore.DAL.Models;
+@using Godel.AutoPartsStore.Common.Models;
+@model PaginatedList<Part>
+
+<div class="container pre-scrollable">
+    <div class="row row-cals-3 ">
+        <form asp-action="GetFilteredParts" method="get">
+            <div class="form-actions no-color">
+                <p class="h5">
+                    Find parts by name:
+                </p>
+                <input type="text" name="search" value="@ViewData["ParmFilter"]" />
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="row row-cals-3">
+        <div class="col"><p class="h5">@Html.ActionLink("Category", "GetFilteredParts", new { sortOrder = ViewData["CategorySortParm"] })</p></div>
+        <div class="col"><p class="h5">@Html.ActionLink("Name", "GetFilteredParts", new { sortOrder = ViewData["NameSortParm"] })</p></div>
+        <div class="col"><p class="h5">@Html.ActionLink("Price", "GetFilteredParts", new { sortOrder = ViewData["PriceSortParm"] })</p></div>
+        <div class="col"><p class="h5">Actions</p></div>
+    </div>
+    @{ foreach (var item in Model)
+        {
+            <div class="row row-cals-6">
+                <div class="col"><p class="h6">@item.Category.Name</p></div>
+                <div class="col"><p class="h6">@item.Name</p></div>
+                <div class="col"><p class="h6">@item.Price</p></div>
+                <div class="col">
+                    <button onclick="location.href='@Url.Action("Details", "Home", new { id = item.Id})'" class="btn btn-success mt-1 margin-bottom">Details</button>
+                    <button onclick="location.href='@Url.Action("Edit", "Home" , new { id=item.Id})'" class="btn btn-primary mt-1 margin-bottom">Edit</button>
+                    <button onclick="location.href='@Url.Action("Delete", "Home", new { id = item.Id})'" class="btn btn-danger mt-1 margin-bottom">Delete</button>
+                </div>
+            </div>
+        }}
+    <div class="row">
+        <div class="col"><button onclick="location.href = '@Url.Action("Create", "Home")'" class="btn btn-success mt-auto">Add</button></div>
+        @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        }
+
+        <a asp-action="GetFilteredParts"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-action="GetFilteredParts"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>
+</div>
+
+

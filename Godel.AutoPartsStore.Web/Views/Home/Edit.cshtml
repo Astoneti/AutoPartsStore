@@ -1,0 +1,42 @@
+﻿@using Godel.AutoPartsStore.DAL.Models;
+@model Part;
+
+<div class="container pre-scrollable">
+    <div class="row row-cals-3">
+        @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+         {
+            <div class="col-md-10">
+                Category:
+                @Html.DropDownListFor(c => Model.CategoryId, (IEnumerable<SelectListItem>)ViewData["categoryList"])
+                @Html.ValidationMessageFor(c => c.Category.Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-10">
+                Name :
+                @Html.EditorFor(model => model.Name)
+            </div>
+            <div class="col-md-10">
+                PartNumber :
+                @Html.EditorFor(model => model.PartNumber)
+            </div>
+            <div class="col-md-10">
+                Price :
+                @Html.EditorFor(model => model.Price)
+            </div>
+            <div class="col-md-10">
+                Quantity :
+                @Html.EditorFor(model => model.Quantity)
+            </div>
+            <div class="col-md-10">
+                IsActive :
+                @Html.EditorFor(model => model.IsActive)
+            </div>
+            <div class="col-md-10">
+                <input class="btn-success" type="submit" value="Save" />
+            </div>
+         }
+    </div>
+</div>
+<div class="text-sm-right">
+    @Html.ActionLink("Back to list", "Parts")
+</div>
+

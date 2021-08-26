@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Godel.AutoPartsStore.Web", "Godel.AutoPartsStore.Web\Godel.AutoPartsStore.Web.csproj", "{CC814921-4C69-4676-A9B5-1B64B8E4BADA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28324706-EEF8-4DE6-9A8D-FC4E00CAE379} = {28324706-EEF8-4DE6-9A8D-FC4E00CAE379}
+		{83467B45-3485-44F4-BA6C-4567A9D8AAF3} = {83467B45-3485-44F4-BA6C-4567A9D8AAF3}
+		{AD1D134C-530A-4B3C-9128-7CD83D3DE283} = {AD1D134C-530A-4B3C-9128-7CD83D3DE283}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Godel.AutoPartsStore.BL", "Godel.AutoPartsStore.BL\Godel.AutoPartsStore.BL.csproj", "{AD1D134C-530A-4B3C-9128-7CD83D3DE283}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Godel.AutoPartsStore.DAL", "Godel.AutoPartsStore.DAL\Godel.AutoPartsStore.DAL.csproj", "{28324706-EEF8-4DE6-9A8D-FC4E00CAE379}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Godel.AutoPartsStore.Common", "Godel.AutoPartsStore.Common\Godel.AutoPartsStore.Common.csproj", "{66181D66-69A1-409A-ABF0-A05972DBDF02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Godel.AutoPartsStore.Migrations", "Godel.AutoPartsStore.Migrations\Godel.AutoPartsStore.Migrations.csproj", "{83467B45-3485-44F4-BA6C-4567A9D8AAF3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28324706-EEF8-4DE6-9A8D-FC4E00CAE379} = {28324706-EEF8-4DE6-9A8D-FC4E00CAE379}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC814921-4C69-4676-A9B5-1B64B8E4BADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC814921-4C69-4676-A9B5-1B64B8E4BADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC814921-4C69-4676-A9B5-1B64B8E4BADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC814921-4C69-4676-A9B5-1B64B8E4BADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1D134C-530A-4B3C-9128-7CD83D3DE283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1D134C-530A-4B3C-9128-7CD83D3DE283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1D134C-530A-4B3C-9128-7CD83D3DE283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1D134C-530A-4B3C-9128-7CD83D3DE283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28324706-EEF8-4DE6-9A8D-FC4E00CAE379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28324706-EEF8-4DE6-9A8D-FC4E00CAE379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28324706-EEF8-4DE6-9A8D-FC4E00CAE379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28324706-EEF8-4DE6-9A8D-FC4E00CAE379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66181D66-69A1-409A-ABF0-A05972DBDF02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66181D66-69A1-409A-ABF0-A05972DBDF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66181D66-69A1-409A-ABF0-A05972DBDF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66181D66-69A1-409A-ABF0-A05972DBDF02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83467B45-3485-44F4-BA6C-4567A9D8AAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83467B45-3485-44F4-BA6C-4567A9D8AAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83467B45-3485-44F4-BA6C-4567A9D8AAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83467B45-3485-44F4-BA6C-4567A9D8AAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {284F5B4E-4C0C-4BC7-8388-6078B5CE18E3}
+	EndGlobalSection
+EndGlobal

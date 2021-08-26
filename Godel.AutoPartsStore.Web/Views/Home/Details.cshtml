@@ -1,0 +1,34 @@
+﻿@using Godel.AutoPartsStore.DAL.Models;
+@model Part;
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <p class="h2">Selected spare part is :</p>
+            <p class="h5">
+                Name :
+                @Model.Name
+            </p>
+            <p class="h5">
+                Part number :
+                @Model.PartNumber
+            </p>
+            <p class="h5">
+                Price :
+                @Model.Price
+            </p>
+            <p class="h5">
+                Quantity :
+                @Model.Quantity
+            </p>
+            <p class="h5">
+                Available in store :
+                @Model.IsActive
+            </p>
+        </div>
+    </div>
+</div>
+<div class="text-sm-right">
+    @Html.ActionLink("Back to list", "Parts")
+</div>
+
